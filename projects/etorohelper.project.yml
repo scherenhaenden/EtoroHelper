@@ -1,0 +1,208 @@
+# EtoroHelper — Magnetar Canonical Project Instance
+# Derived from projects/_template.project.yml
+# Kept in sync with PLAN.md, STATUS.md, and BITACORA.md
+
+metadata:
+  project_name: "EtoroHelper"
+  description: "Automated eToro data extraction, parsing, and output generation tool. Downloads user profiles, portfolios, performance data, and statistics from eToro and converts them to JSON and Markdown formats."
+  start_date: "2025-12-15"
+  owner: "edward"
+  repository: "magnetar-finance-etorohelper"
+  canonical_model_version: "1.0.0"
+
+stakeholders:
+  - name: "edward"
+    role: "Project Lead / Developer"
+    contact: "edward"
+
+milestones:
+  - id: "ms-01"
+    name: "Project Foundation"
+    target_date: "2025-12-15"
+    description: "Core scraping pipeline: local portfolio parsing, Selenium downloader, performance & stats parsers, JSON/MD output."
+    completion_criteria: "All parsers functional; JSON + MD outputs generated for a real eToro user."
+    status: "completed"
+
+  - id: "ms-02"
+    name: "CLI Enhancement"
+    target_date: "2026-01-31"
+    description: "Add --user and --user-url CLI args; dynamic download path downloads/{user}/{date}/; backward compatibility."
+    completion_criteria: "All new args functional; test suite green; README updated."
+    status: "completed"
+
+  - id: "ms-03"
+    name: "Canonical Governance"
+    target_date: "2026-02-23"
+    description: "Apply Magnetar Canonical Project Model; create all required governance files."
+    completion_criteria: "All required files present; YAML schema instantiated; BITACORA initialised."
+    status: "in_progress"
+
+  - id: "ms-04"
+    name: "Stability & Coverage"
+    target_date: "2026-03-31"
+    description: "Integration tests; >=80% coverage; CI validation of canonical file presence."
+    completion_criteria: "CI green; coverage >=80%; no open critical blockers."
+    status: "planned"
+
+tasks:
+  - id: "task-101"
+    milestone: "ms-01"
+    title: "Implement local portfolio HTML parser"
+    owner: "edward"
+    effort_pts: 5
+    weight_pct: 10
+    state: "done"
+    notes: "src/parser.py"
+
+  - id: "task-102"
+    milestone: "ms-01"
+    title: "Implement Selenium downloader"
+    owner: "edward"
+    effort_pts: 8
+    weight_pct: 16
+    state: "done"
+    notes: "src/downloader.py"
+
+  - id: "task-103"
+    milestone: "ms-01"
+    title: "Implement performance parser"
+    owner: "edward"
+    effort_pts: 5
+    weight_pct: 10
+    state: "done"
+    notes: "src/performance_parser.py"
+
+  - id: "task-104"
+    milestone: "ms-01"
+    title: "Implement statistics parser"
+    owner: "edward"
+    effort_pts: 5
+    weight_pct: 10
+    state: "done"
+    notes: "src/stats_parser.py"
+
+  - id: "task-105"
+    milestone: "ms-01"
+    title: "Wire parsers in main.py with basic CLI"
+    owner: "edward"
+    effort_pts: 3
+    weight_pct: 6
+    state: "done"
+    notes: "main.py"
+
+  - id: "task-201"
+    milestone: "ms-02"
+    title: "Add --user CLI argument"
+    owner: "edward"
+    effort_pts: 2
+    weight_pct: 4
+    state: "done"
+    notes: "main.py + argparse"
+
+  - id: "task-202"
+    milestone: "ms-02"
+    title: "Add --user-url CLI argument + URL extraction"
+    owner: "edward"
+    effort_pts: 3
+    weight_pct: 6
+    state: "done"
+    notes: "src/url_utils.py"
+
+  - id: "task-203"
+    milestone: "ms-02"
+    title: "Dynamic download path downloads/{user}/{date}/"
+    owner: "edward"
+    effort_pts: 2
+    weight_pct: 4
+    state: "done"
+    notes: "src/downloader.py"
+
+  - id: "task-204"
+    milestone: "ms-02"
+    title: "Unit tests for URL utilities"
+    owner: "edward"
+    effort_pts: 3
+    weight_pct: 6
+    state: "done"
+    notes: "tests/test_url_utils.py — 12 tests passing"
+
+  - id: "task-205"
+    milestone: "ms-02"
+    title: "Integration tests for downloader (mocked)"
+    owner: "edward"
+    effort_pts: 3
+    weight_pct: 6
+    state: "in_review"
+    notes: "tests/test_downloader.py — encoding issues noted; see blocker-001"
+
+  - id: "task-301"
+    milestone: "ms-03"
+    title: "Apply Magnetar Canonical Project Model"
+    owner: "edward"
+    effort_pts: 5
+    weight_pct: 10
+    state: "in_review"
+    notes: "All governance files created"
+
+  - id: "task-302"
+    milestone: "ms-03"
+    title: "Instantiate projects/etorohelper.project.yml"
+    owner: "edward"
+    effort_pts: 2
+    weight_pct: 4
+    state: "done"
+    notes: "Derived from _template.project.yml"
+
+  - id: "task-401"
+    milestone: "ms-04"
+    title: "Add CI workflow for canonical file validation"
+    owner: "edward"
+    effort_pts: 3
+    weight_pct: 6
+    state: "planned"
+    notes: "GitHub Actions"
+
+  - id: "task-402"
+    milestone: "ms-04"
+    title: "Achieve >=80% test coverage"
+    owner: "edward"
+    effort_pts: 5
+    weight_pct: 10
+    state: "planned"
+    notes: "Coverage report via pytest-cov"
+
+risks:
+  - id: "risk-01"
+    description: "eToro changes DOM structure, breaking parsers"
+    severity: "high"
+    probability: "medium"
+    mitigation: "Parsers use automation IDs; monitor for failures; add regression tests in ms-04"
+    status: "open"
+
+  - id: "risk-02"
+    description: "ChromeDriver version mismatch with installed Chrome"
+    severity: "medium"
+    probability: "low"
+    mitigation: "webdriver-manager auto-manages driver version"
+    status: "mitigated"
+
+  - id: "risk-03"
+    description: "eToro rate-limiting or IP blocking during scraping"
+    severity: "medium"
+    probability: "medium"
+    mitigation: "Add configurable delays; respect robots.txt; use responsibly"
+    status: "open"
+
+  - id: "risk-04"
+    description: "Test file encoding issues blocking integration test suite"
+    severity: "low"
+    probability: "high"
+    mitigation: "Normalise all test fixtures to UTF-8; use explicit encoding parameter"
+    status: "open"
+
+reporting:
+  bitacora_path: "BITACORA.md"
+  plan_path: "PLAN.md"
+  status_path: "STATUS.md"
+  coverage_threshold_pct: 80
+  ci_validate_canonical_files: true
