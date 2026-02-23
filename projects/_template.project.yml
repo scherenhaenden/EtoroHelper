@@ -1,0 +1,49 @@
+# Magnetar Canonical Project Model — Project YAML Template
+# Copy this file to projects/<project-name>.project.yml and fill in all values.
+# YAML keys use lower_snake_case per RULES.md.
+
+metadata:
+  project_name: "[Project Name]"
+  description: "[A concise description of the project and its purpose.]"
+  start_date: "YYYY-MM-DD"
+  owner: "[Owner name or team]"
+  repository: "magnetar-<domain>-<descriptor>"
+  canonical_model_version: "1.0.0"
+
+stakeholders:
+  - name: "[Stakeholder Name]"
+    role: "[Role, e.g., Project Lead / Developer / Reviewer]"
+    contact: "[email or handle]"
+
+milestones:
+  - id: "ms-01"
+    name: "[Milestone Name]"
+    target_date: "YYYY-MM-DD"
+    description: "[What this milestone covers.]"
+    completion_criteria: "[Measurable criteria for completion.]"
+    status: "planned"  # planned | in_progress | completed
+
+tasks:
+  - id: "task-101"
+    milestone: "ms-01"
+    title: "[Task Title]"
+    owner: "[Owner]"
+    effort_pts: 0
+    weight_pct: 0
+    state: "planned"  # planned | ready | in_progress | in_review | blocked | done
+    notes: ""
+
+risks:
+  - id: "risk-01"
+    description: "[Risk description]"
+    severity: "medium"  # low | medium | high | critical
+    probability: "medium"  # low | medium | high
+    mitigation: "[Mitigation strategy]"
+    status: "open"  # open | mitigated | closed
+
+reporting:
+  bitacora_path: "BITACORA.md"
+  plan_path: "PLAN.md"
+  status_path: "STATUS.md"
+  coverage_threshold_pct: 80
+  ci_validate_canonical_files: true
