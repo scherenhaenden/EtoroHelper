@@ -1,0 +1,29 @@
+[
+  {
+    "Position": "0992.HK (Lenovo Group)",
+    "Price": "9.5456 (-1.59%)",
+    "Nettowert": "$42.56",
+    "Asset-G/V": "HK$10.39",
+    "Änderung": "-1.59%",
+    "Täglicher G/V": "-$0.62",
+    "G/V (%)": "3.30%",
+    "Marktexposition": "HK$331.17"
+  },
+  {
+    "Position": "AAD.DE (AMADEUS FIRE AG)",
+    "Price": "43.08 (0.30%)",
+    "Nettowert": "$88.49",
+    "Asset-G/V": "-€11.27",
+    "Änderung": "0.30%",
+    "Täglicher G/V": "$0.41",
+    "G/V (%)": "-11.51%",
+    "Marktexposition": "€75.36"
+  },
+  {
+    "Position": "adams302 (Rhys Adams)",
+    "Risk": "risk-4",
+    "Nettowert": "$678.92",
+    "Täglicher G/V": "$2.47",
+    "G/V (%)": "25.23%"
+  }
+]

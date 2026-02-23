@@ -1,0 +1,90 @@
+[
+  {
+    "ticker": "0992.HK",
+    "company_name": "Lenovo Group",
+    "price": 9.5456,
+    "net_value": 42.56,
+    "asset_pnl": "HK$10.39",
+    "change_percent": -1.59,
+    "daily_pnl": -0.62,
+    "gain_percent": 3.30,
+    "market_exposure": "HK$331.17"
+  },
+  {
+    "ticker": "AAD.DE",
+    "company_name": "AMADEUS FIRE AG",
+    "price": 43.08,
+    "net_value": 88.49,
+    "asset_pnl": "-€11.27",
+    "change_percent": 0.30,
+    "daily_pnl": 0.41,
+    "gain_percent": -11.51,
+    "market_exposure": "€75.36"
+  },
+  {
+    "ticker": "adams302",
+    "company_name": "Rhys Adams (Mirrored Account)",
+    "price": null,
+    "net_value": 678.92,
+    "asset_pnl": null,
+    "change_percent": null,
+    "daily_pnl": 2.47,
+    "gain_percent": 25.23,
+    "market_exposure": null
+  },
+  {
+    "ticker": "AMLP",
+    "company_name": "Alerian MLP ETF",
+    "price": 47.41,
+    "net_value": 5.77,
+    "asset_pnl": "-$0.22",
+    "change_percent": 0.17,
+    "daily_pnl": 0.00,
+    "gain_percent": -3.59,
+    "market_exposure": "$5.78"
+  },
+  {
+    "ticker": "ARR",
+    "company_name": "ARMOUR Residential REIT Inc",
+    "price": 16.91,
+    "net_value": 101.85,
+    "asset_pnl": "-$108.15",
+    "change_percent": -0.24,
+    "daily_pnl": 0.00,
+    "gain_percent": -51.50,
+    "market_exposure": "$101.85"
+  },
+  {
+    "ticker": "ASGN",
+    "company_name": "ASGN Incorporated",
+    "price": 48.07,
+    "net_value": 39.92,
+    "asset_pnl": "$2.93",
+    "change_percent": 0.94,
+    "daily_pnl": 0.00,
+    "gain_percent": 7.93,
+    "market_exposure": "$39.92"
+  },
+  {
+    "ticker": "Aukie2008",
+    "company_name": "Mike Moest (Mirrored Account)",
+    "price": null,
+    "net_value": 3003.14,
+    "asset_pnl": null,
+    "change_percent": null,
+    "daily_pnl": 3.56,
+    "gain_percent": 7.05,
+    "market_exposure": null
+  },
+  {
+    "ticker": "BLDR",
+    "company_name": "Builders FirstSource Inc",
+    "price": 106.49,
+    "net_value": 20.96,
+    "asset_pnl": "-$5.32",
+    "change_percent": -1.83,
+    "daily_pnl": -0.36,
+    "gain_percent": -20.23,
+    "market_exposure": "$20.96"
+  }
+]
